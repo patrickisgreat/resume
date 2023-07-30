@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+div.minipage.left {
+    display: inline-block;
+    width: 20%; /* Adjust as required. This assumes you want two columns and a bit of spacing between them */
+    vertical-align: top; /* To align the top edges if they have different amounts of content */
+    margin-right: 45px; 
+    }
+div.minipage.right {
+    display: inline-block;
+    width: 50%; /* Adjust as required. This assumes you want two columns and a bit of spacing between them */
+    vertical-align: top; /* To align the top edges if they have different amounts of content */
+    margin-right: 20px; 
+    margin-top: 1em;
+}   
+body {
+   font-family: 'Lato', sans-serif;
+   color: #2b2b2b;
+   font-size: 16px;
+   padding: 40px;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Raleway', sans-serif;
+   color: #6A6A6A;
+}
+h3.sectionHead {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 1.8em;
+   text-transform: uppercase;
+   margin: 20px 0 10px 0;
+}
+h4.subsectionHead {
+   font-family: 'Lato', sans-serif;
+   font-weight: bold;
+   font-size: 1.2em;
+   text-transform: uppercase;
+   color: #333333;
+   margin: 20px 0 10px 0;
+}
+.date {
+   color: #666666;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 200;
+   font-size: 0.5em;
+}

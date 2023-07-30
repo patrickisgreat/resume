@@ -1,0 +1,10 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Education}}{2}\relax 
+\doTocEntry\tocsubsection{1.1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{The Internet}}{2}\relax 
+\doTocEntry\tocsubsection{1.2}{\csname a:TocLink\endcsname{1}{x1-30002}{QQ2-1-3}{Wallace State College}}{2}\relax 
+\doTocEntry\tocsubsection{1.3}{\csname a:TocLink\endcsname{1}{x1-40003}{QQ2-1-4}{North Cobb High School}}{2}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-50002}{QQ2-1-5}{Links}}{2}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-60003}{QQ2-1-6}{Skills}}{2}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-70001}{QQ2-1-7}{Programming}}{2}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-80002}{QQ2-1-8}{DevOps}}{2}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-90004}{QQ2-1-9}{Experience}}{3}\relax 

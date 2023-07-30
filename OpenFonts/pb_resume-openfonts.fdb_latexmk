@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1690739174 "pb_resume-openfonts.xdv" "pb_resume-openfonts.pdf" "pb_resume-openfonts" 1690739174
-  "pb_resume-openfonts.xdv" 1690739174 40280 25c4377ac6d0faba3118f78922ecae54 "xelatex"
+["xdvipdfmx"] 1690749208 "pb_resume-openfonts.xdv" "pb_resume-openfonts.pdf" "pb_resume-openfonts" 1690749208
+  "pb_resume-openfonts.xdv" 1690749208 40804 ecebedc79f0e47f54e79d175aa0d5a46 "xelatex"
   (generated)
   "pb_resume-openfonts.pdf"
-["xelatex"] 1690739173 "/home/blinky/code/resume/OpenFonts/pb_resume-openfonts.tex" "pb_resume-openfonts.xdv" "pb_resume-openfonts" 1690739174
+["xelatex"] 1690749207 "/home/blinky/code/resume/OpenFonts/pb_resume-openfonts.tex" "pb_resume-openfonts.xdv" "pb_resume-openfonts" 1690749208
   "/etc/texmf/web2c/texmf.cnf" 1690663923 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/blinky/code/resume/OpenFonts/pb_resume-openfonts.tex" 1690739172 7264 d6e7c874e72c7ffed30cf493919afda4 ""
+  "/home/blinky/code/resume/OpenFonts/pb_resume-openfonts.tex" 1690749207 7257 304da74c5ed694fa2fbc46f6fb807ec0 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -68,10 +68,10 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1690664727 3643446 039cf4e663199d90292c26499d00846a ""
-  "pb-resume-openfonts.cls" 1690664131 2839 7bcde8335af246291a134c2108b3c61e ""
-  "pb_resume-openfonts.aux" 1690739174 1677 1d982f6bab5b886a62f82024ad5c8992 "xelatex"
-  "pb_resume-openfonts.out" 1690739174 985 5080501b84b8a3fe9d24e6f80a7d66d6 "xelatex"
-  "pb_resume-openfonts.tex" 1690739172 7264 d6e7c874e72c7ffed30cf493919afda4 ""
+  "pb-resume-openfonts.cls" 1690742441 2840 7c186a3f68734999ff0c8d9a10b49c9f ""
+  "pb_resume-openfonts.aux" 1690749208 1677 1d982f6bab5b886a62f82024ad5c8992 "xelatex"
+  "pb_resume-openfonts.out" 1690749208 985 5080501b84b8a3fe9d24e6f80a7d66d6 "xelatex"
+  "pb_resume-openfonts.tex" 1690749207 7257 304da74c5ed694fa2fbc46f6fb807ec0 ""
   (generated)
   "pb_resume-openfonts.aux"
   "pb_resume-openfonts.log"
