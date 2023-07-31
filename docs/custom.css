@@ -43,3 +43,16 @@ h4.subsectionHead {
    font-weight: 200;
    font-size: 0.5em;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+   div.minipage.left, div.minipage.right {
+       display: block;
+       width: 100%;
+       margin-right: 0;
+   }
+
+   div.minipage.right {
+       margin-top: 2em;
+   }
+}
