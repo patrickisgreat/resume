@@ -1,49 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PB - One Page Two Column Resume
-% LaTeX Template
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CHANGELOG:
-% v1.1:
-% 1. Fixed several compilation bugs with \renewcommand
-% 2. Got Open-source fonts (Windows/Linux support)
-% 3. Added Last Updated
-% 4. Move Title styling into .sty
-% 5. Commented .sty file.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the
-% vertical limit
-% 2. Hacky space on the first bullet point on the second column.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \documentclass[]{pb-resume}
 \usepackage{fancyhdr}
- 
+
 \pagestyle{fancy}
 \fancyhf{}
- 
+
 \rfoot{Page \thepage \hspace{1pt}}
 \begin{document}
 
@@ -72,6 +32,36 @@
 \begin{minipage}[t]{0.33\textwidth} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/patrickisgreat}{\bf patrickisgreat} \\
+LinkedIn://  \href{https://www.linkedin.com/in/patrick-bennett-7769016}{\bf patrick-bennett-7769016} \\
+Twitter://  \href{https://twitter.com/patrickisgreat}{\bf @patrickisgreat} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+JavaScript \textbullet{}  Python \textbullet{}  PHP \textbullet{}  \\
+React \textbullet{}  Laravel \textbullet{}  Vue.js \textbullet{} 
+Node.js \textbullet{}  Express.js \\ 
+CSS \textbullet{} Sass \textbullet{} Less \textbullet{} HTML \\
+GraphQL \textbullet{} REST \textbullet{}  SOAP \\
+MySQL \textbullet{} Postgres \textbullet{} SQL \\
+\sectionsep
+
+\subsection{DevOps}
+Linux CLI \textbullet{}  BASH \textbullet{}  Vim \\
+Apache \textbullet{} Git (cli) \textbullet{} Docker \\
+AWS \textbullet{} Kubernetes \textbullet{} CI / CD \\
+Jest \textbullet{} Mocha \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -93,46 +83,8 @@ GitHub \\
 \sectionsep
 
 \subsection{North Cobb High School}
-\location{Grad. 1999 |  Acworth, GA}
+\location{Grad. 1999 | Acworth, GA}
 \sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LINKS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Links} 
-Facebook:// \href{https://facebook/paddy.bee.980}{\bf paddy.bee.980} \\
-Github:// \href{https://github.com/patrickisgreat}{\bf patrickisgreat} \\
-LinkedIn://  \href{https://www.linkedin.com/in/patrick-bennett-7769016}{\bf patrick-bennett-7769016} \\
-Twitter://  \href{https://twitter.com/patrickisgreat}{\bf @patrickisgreat} \\
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Skills}
-\subsection{Programming}
-JavaScript \textbullet{}  Python \textbullet{}  PHP \textbullet{}  \\
-React \textbullet{}  Laravel \textbullet{}  Vue.js \textbullet{} 
-Node.js \textbullet{}  Express.js \\ 
-CSS \textbullet{} Sass \textbullet{} Less \textbullet{} HTML \\
-GraphQL \textbullet{} REST \textbullet{}  SOAP\textbullet{} \\
-MySQL\textbullet{}  Postgres\textbullet{}  SQL\textbullet{} \\
-\sectionsep
-
-\subsection{DevOps}
-Linux CLI \textbullet{}  BASH \textbullet{}  Vim\textbullet{}  \\
-Apache \textbullet{} Git (cli) \textbullet{} Docker \\
-AWS \textbullet{} Kubernetes \textbullet{} CI / CD \textbullet{} \\
-Jest \textbullet{} Mocha \textbullet{}  
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{minipage} 
 \hfill
@@ -142,58 +94,67 @@ Jest \textbullet{} Mocha \textbullet{}
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experience}
+
+\runsubsection{SoundCloud}
+\descript{| Senior Software Engineer }
+\location{September 2022 - Present | Remote}
+\vspace{10pt} % Removed top vertical space
+\begin{tightemize}
+\item Migrated legacy Scala services into AWS (DynamoDB, S3) to modernize infrastructure.
+\item Built Kafka event pipelines and automated workflows for track boosting algorithms.
+\item Developed ETL pipelines to ingest large datasets into BigQuery for data analysis.
+\item Added new features to a federated GraphQL subgraph ecosystem using TypeScript and Go.
+\item Created AWS and GCP infrastructure using Terraform and implemented automated end-to-end tests in GitHub Actions.
+\end{tightemize}
+\sectionsep
+
 \runsubsection{Airbus}
 \descript{| Sr. Software Engineer }
-\location{September 2021 to present}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\location{September 2021 to September 2022}
+\vspace{0pt} % Removed top vertical space
 \begin{tightemize}
-\item Full Stack: React / Next.js / Node / GraphQL / MongoDB.
-\item Working on refactoring MVP application: SkyWise Predictive Maintenance, an application to help airlines keep track of the health of their fleet, and make predictions about future maintenance events.
-\item Leading a small sub team on the effort to implement e2e, integration, and unit testing across the application. 
-\item Built a mocking system for the graphql layer using mock service workers, cached static responses, and a simple routing system.
-\item Traveling to France to interface with engineering teams and assist with PI planning for 10 week iterations.
-\item Still fairly new at Airbus and continuing to absorb knowledge. 
+\item Developed big data pipelines using Python FastAPI for GE's solver system NOO.
+\item Integrated FPUO predictive maintenance software with flight simulators to simulate real-world scenarios.
+\item Built back-end features for Skywise Health Monitoring software.
+\item Refactored the SkyWise Predictive Maintenance MVP application for scalability and performance improvements.
 \end{tightemize}
 \sectionsep
 
 \runsubsection{CNN / WarnerMedia }
 \descript{| Sr. Software Engineer }
 \location{March 2020 – September 2021}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\vspace{0pt} % Removed top vertical space
 \begin{tightemize}
-\item Full stack React, JavaScript, and Python development on an agile team.
-\item Improved performance and scalability of the LiveStory React / GraphQL application which gets millions of hits per day.
-\item Improved performance and scalability of the cnn-data-api GraphQL service using k6, and Apollo Studio to identify and refactor bottlenecks in queries and api stitching.
-\item Built failover REST api for LiveStory application.
-\item Helped build first iteration of CNN+, CNN's forthcoming video streaming platform, within CNN's proprietary publishing platform.
-\item Built DOM reconciliation features within CNN's Clay CMS to achieve reactive client side UI updates.
-\item Built ClientModel implementation within Clay to allow for redux-esque client side state management across components.
+\item Improved scalability of the LiveStory React / GraphQL app serving millions daily.
+\item Optimized the cnn-data-api GraphQL service, improving query performance and API stitching.
+\item Built the first iteration of CNN+, CNN's video streaming platform, within CNN's proprietary publishing platform.
+\item Developed DOM reconciliation features within CNN's Clay CMS for client-side UI updates.
+\item Implemented a Redux-like state management system within Clay CMS for component-level state handling.
 \end{tightemize}
 \sectionsep
-
 
 \runsubsection{Digital Additive}
 \descript{| Sr. Software Engineer }
 \location{April 2015 - March 2020}
+\vspace{0pt} % Consistent vertical spacing
 \begin{tightemize}
-\item Shipped Vacoda - content management and creation system for corporate teams built in Laravel and Vue.js. This app is currently in production use by Home Depot CRM teams and Carters.com.
-\item Configured Vacoda to ship to AWS EC2 instances via custom Docker containers with BitBucket Pipelines.
-\item Built a product rating system for Home Depot.
-\item Built various middleware and integrations for clients such as WeWork, IBM / Interact, and SouthernLinc to extend the functionality of Salesforce Marketing cloud.
+\item Shipped Vacoda, a Laravel and Vue.js CMS for Home Depot CRM teams.
+\item Deployed Vacoda to AWS EC2 using Docker and BitBucket Pipelines.
+\item Built integrations and middleware for Salesforce Marketing Cloud for clients such as WeWork, IBM, and SouthernLinc.
+\item Designed and implemented a product rating system for Home Depot.
 \end{tightemize}  
 \sectionsep
 
 \runsubsection{BlacQube}
 \descript{| Web Developer }
 \location{May 2013 - April 2015 | Atlanta, GA}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\vspace{0pt} % Consistent vertical spacing
 \begin{tightemize}
-\item Built award winning mobile and web front ends for Mercedes and Mercedes-AMG.
-\item Worked closely with designers to translate static designs into animated interactive experiences built with JavaScript and jQuery.
-\item Upgraded cakePHP on the Mercedes-AMG Private Lounge web app. 
-\item Administered web servers hosting various builds.
+\item Built mobile/web front ends for Mercedes using JavaScript and jQuery.
+\item Administered web servers and managed CakePHP upgrades for Mercedes-AMG Private Lounge.
+\item Collaborated with designers to translate static designs into interactive experiences.
 \end{tightemize}
 \sectionsep
 
 \end{minipage} 
-\end{document}  \documentclass[]{article}
+\end{document}
