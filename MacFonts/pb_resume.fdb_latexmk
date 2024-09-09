@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1725574643.81533 "pb_resume.xdv" "pb_resume.pdf" "pb_resume" 1725574644.14856 0
-  "pb_resume.xdv" 1725574643.76967 35756 ae801a7dc54db8b3b0e163b3b8a6c4d2 "xelatex"
+["xdvipdfmx"] 1725651099.50301 "pb_resume.xdv" "pb_resume.pdf" "pb_resume" 1725651099.84097 0
+  "pb_resume.xdv" 1725651099.45718 36704 ea581da8ba1249b0bcb95b07fb3a55f6 "xelatex"
   (generated)
   "pb_resume.pdf"
   (rewritten before read)
-["xelatex"] 1725574643.06094 "/Users/pb/code/resume/MacFonts/pb_resume.tex" "pb_resume.xdv" "pb_resume" 1725574644.14762 0
-  "/Users/pb/code/resume/MacFonts/pb_resume.tex" 1725574639.18272 5301 2ee77ede4656477a242cf3e8565f4d24 ""
+["xelatex"] 1725651098.62324 "/Users/pb/code/resume/MacFonts/pb_resume.tex" "pb_resume.xdv" "pb_resume" 1725651099.8402 0
+  "/Users/pb/code/resume/MacFonts/pb_resume.tex" 1725651091.51577 5448 bff092db39a03bb29033c34e48712a77 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -85,9 +85,9 @@
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1725568583 10850176 4d99ebf316b5b8ae68680bb798bbebe1 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "pb-resume.cls" 1725573425.75567 2965 87ce40d9f5efa792b7cae9e5d5e047de ""
-  "pb_resume.aux" 1725574643.76651 1259 abba9f9d12728234bb0c112d423cf95e "xelatex"
-  "pb_resume.out" 1725574643.76744 985 3c56269fd1763c14e3a4f8e53e5b26b3 "xelatex"
-  "pb_resume.tex" 1725574639.18272 5301 2ee77ede4656477a242cf3e8565f4d24 ""
+  "pb_resume.aux" 1725651099.45368 1259 abba9f9d12728234bb0c112d423cf95e "xelatex"
+  "pb_resume.out" 1725651099.45466 985 3c56269fd1763c14e3a4f8e53e5b26b3 "xelatex"
+  "pb_resume.tex" 1725651091.51577 5448 bff092db39a03bb29033c34e48712a77 ""
   (generated)
   "pb_resume.aux"
   "pb_resume.log"

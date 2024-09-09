@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.5)  5 SEP 2024 18:17
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.5)  6 SEP 2024 15:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -624,7 +624,7 @@ LaTeX Font Warning: Font shape `TU/HelveticaLight(1)/m/sc' undefined
 (Font)              using `TU/HelveticaLight(1)/m/n' instead on input line 38.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
@@ -649,7 +649,7 @@ Package fontspec Info: Font family 'Helvetica(0)' created for font 'Helvetica'
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--77
+Underfull \hbox (badness 10000) in paragraph at lines 73--79
 
  []
 
@@ -678,11 +678,11 @@ Package fontspec Info: Font family 'HeitiSCMedium(0)' created for font 'Heiti
 
 
 LaTeX Font Warning: Font shape `TU/HeitiSCMedium(0)/m/sc' undefined
-(Font)              using `TU/HeitiSCMedium(0)/m/n' instead on input line 81.
+(Font)              using `TU/HeitiSCMedium(0)/m/n' instead on input line 83.
 
 
 LaTeX Font Warning: Font shape `TU/HeitiTCMedium(0)/m/sc' undefined
-(Font)              using `TU/HeitiTCMedium(0)/m/n' instead on input line 82.
+(Font)              using `TU/HeitiTCMedium(0)/m/n' instead on input line 84.
 
 [1
 
@@ -701,10 +701,10 @@ Package rerunfilecheck Info: File `pb_resume.out' has not changed.
 Here is how much of TeX's memory you used:
  17126 strings out of 474773
  322644 string characters out of 5757725
- 1947839 words of memory out of 5000000
+ 1948839 words of memory out of 5000000
  39015 multiletter control sequences out of 15000+600000
  558933 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,11n,137p,311b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on pb_resume.xdv (1 page, 35756 bytes).
+Output written on pb_resume.xdv (1 page, 36704 bytes).
