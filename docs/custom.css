@@ -1,58 +1,168 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
-div.minipage.left {
-    display: inline-block;
-    width: 20%; /* Adjust as required. This assumes you want two columns and a bit of spacing between them */
-    vertical-align: top; /* To align the top edges if they have different amounts of content */
-    margin-right: 45px; 
-    }
-div.minipage.right {
-    display: inline-block;
-    width: 50%; /* Adjust as required. This assumes you want two columns and a bit of spacing between them */
-    vertical-align: top; /* To align the top edges if they have different amounts of content */
-    margin-right: 20px; 
-    margin-top: 1em;
-}   
+
+:root {
+  --primary: #2b2b2b;
+  --headings: #6a6a6a;
+  --subheadings: #333333;
+  --date: #666666;
+  --rule: #cccccc;
+}
+
+* { box-sizing: border-box; }
+
 body {
-   font-family: 'Lato', sans-serif;
-   color: #2b2b2b;
-   font-size: 16px;
-   padding: 40px;
-}
-h1, h2, h3, h4, h5, h6 {
-   font-family: 'Raleway', sans-serif;
-   color: #6A6A6A;
-}
-h3.sectionHead {
-   font-family: 'Lato', sans-serif;
-   font-weight: 300;
-   font-size: 1.8em;
-   text-transform: uppercase;
-   margin: 20px 0 10px 0;
-}
-h4.subsectionHead {
-   font-family: 'Lato', sans-serif;
-   font-weight: bold;
-   font-size: 1.2em;
-   text-transform: uppercase;
-   color: #333333;
-   margin: 20px 0 10px 0;
-}
-.date {
-   color: #666666;
-   font-family: 'Raleway', sans-serif;
-   font-weight: 200;
-   font-size: 0.5em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: var(--primary);
+  font-size: 16px;
+  line-height: 1.45;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  background: #fff;
 }
 
-/* Mobile responsive styles */
+/* ── Masthead ─────────────────────────────────────────────── */
+
+.masthead { text-align: center; }
+
+.masthead h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 3.25rem;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--primary);
+}
+
+.masthead .given { font-weight: 100; }
+.masthead .family { font-weight: 300; }
+
+.masthead .contact {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  color: var(--headings);
+  font-size: 0.95rem;
+  margin: 0.4rem 0 0.75rem;
+}
+
+.masthead .contact a { color: inherit; text-decoration: none; }
+.masthead .contact a:hover { text-decoration: underline; }
+.masthead .sep { margin: 0 0.15rem; }
+
+.masthead::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--headings);
+  margin-bottom: 1.75rem;
+}
+
+/* ── Layout ───────────────────────────────────────────────── */
+
+.resume {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.column.left  { flex: 0 0 30%; }
+.column.right { flex: 1 1 auto; min-width: 0; }
+
+section { margin-bottom: 1.5rem; }
+
+/* ── Headings ─────────────────────────────────────────────── */
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--headings);
+  margin: 0 0 0.5rem;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  color: var(--subheadings);
+  margin: 1rem 0 0.2rem;
+}
+
+section > h3:first-of-type { margin-top: 0.25rem; }
+
+p { margin: 0 0 0.35rem; }
+
+.profile { margin-bottom: 0.5rem; }
+
+.descript {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-variant: small-caps;
+  text-transform: none;
+  color: var(--subheadings);
+  font-size: 0.95rem;
+}
+
+.location {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  color: var(--headings);
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.links a { color: var(--primary); text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* ── Experience ───────────────────────────────────────────── */
+
+.role { margin-bottom: 1.1rem; }
+
+.role .employer { margin-bottom: 0.1rem; }
+
+.role ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.role li { margin-bottom: 0.3rem; }
+
+.earlier {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  color: var(--headings);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+
+.page-footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+}
+
+.page-footer a { color: var(--headings); }
+
+/* ── Mobile ───────────────────────────────────────────────── */
+
 @media (max-width: 768px) {
-   div.minipage.left, div.minipage.right {
-       display: block;
-       width: 100%;
-       margin-right: 0;
-   }
+  body { padding: 1.5rem 1.1rem 3rem; }
+  .masthead h1 { font-size: 2.25rem; }
+  .resume { display: block; }
+  .column.left { margin-bottom: 2rem; }
+}
 
-   div.minipage.right {
-       margin-top: 2em;
-   }
+/* ── Print ────────────────────────────────────────────────── */
+
+@media print {
+  body { padding: 0; font-size: 10pt; max-width: none; }
+  .masthead h1 { font-size: 32pt; }
+  .resume { gap: 1.5rem; }
+  .page-footer { display: none; }
+  a { color: inherit; text-decoration: none; }
 }
