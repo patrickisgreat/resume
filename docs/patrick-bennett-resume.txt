@@ -1,0 +1,137 @@
+PATRICK BENNETT
+Senior Software Engineer
+Atlanta, GA | 404.514.7647 | patrickisgreat@gmail.com
+GitHub: github.com/patrickisgreat
+LinkedIn: linkedin.com/in/patrick-bennett-7769016
+Stack Overflow: stackoverflow.com/users/864159/funkenstein
+Portfolio: patrickisgreat.com
+
+
+SUMMARY
+
+13 years shipping production software, two of them in aviation at Airbus /
+Skywise. I build the systems that let AI agents do real engineering work:
+agentic CI/CD, MCP servers, RAG retrieval and LLM tooling across Vue /
+TypeScript front ends and cloud-native backends. I also know when a problem is
+better off without a model.
+
+
+SKILLS
+
+AI and Agentic: Claude, OpenAI, Gemini, MCP servers, agent orchestration, RAG,
+embeddings, pgvector, prompt engineering, prompt caching, LLM code review in CI,
+Claude Code
+
+Languages: TypeScript, JavaScript, Python, Rust, Go, PHP, Swift, SQL
+
+Frontend: Vue.js, Nuxt, React, Next.js, SPA, micro-frontends, HTML, SASS, CSS,
+Tailwind
+
+Backend and Data: Node.js, Go, FastAPI, NestJS, federated GraphQL, REST, Kafka,
+Postgres, DynamoDB, BigQuery
+
+DevOps and Testing: GitHub Actions, Docker, Linux, AWS (Lambda, Kinesis, SQS,
+EC2, S3), GCP, CloudFormation, Terraform, Playwright, Vitest, Jest, Pytest, k6
+
+
+EXPERIENCE
+
+Threaditate - Founder and Principal Engineer
+November 2025 - Present | Atlanta, GA
+
+- Threaditate turns a customer photo into a string art pattern for a physical
+  240-pin loom kit. Built the platform: Next.js 15 / React 19 / TypeScript
+  (strict) driving a Rust-to-WebAssembly solver in a Web Worker, on Supabase,
+  Vercel and a Shopify storefront.
+- Built Neural Threadwork, a closed-loop retrieval system for render quality: a
+  vision-model judge scores every render, a 16-dimension structured feature
+  embedding indexes it in pgvector, and nearest-neighbour retrieval feeds
+  winning recipes back to the advisor as few-shot exemplars. Structured features
+  beat CLIP here: tone, not semantics, predicts the recipe.
+- Architected an AI-augmented GitHub Actions pipeline (lint, type, unit and
+  Playwright E2E gates plus nightly E2E) with an LLM reviewer on every pull
+  request, trigger-scoped and model-pinned to hold review spend down without
+  losing coverage.
+- Published agentic-toolkit: an Actions layer turning any repo into an issue ->
+  agent -> PR -> review -> merge -> retro loop, behind one provider seam that
+  runs the same workflows on Claude Code, OpenAI Codex or Google Gemini, with
+  complexity routing and a human approval gate.
+- Also built sharma-bot, a Go agent loop straight on the Anthropic SDK (no
+  framework) with tool use, prompt caching and per-call cost telemetry; an
+  approve-first bookkeeping agent with an append-only audit log and per-action
+  undo; and a Nuxt 4 / Vue 3 SPA on Supabase.
+
+
+SoundCloud - Senior Software Engineer
+October 2023 - November 2025 | Remote
+
+- Creator Success / Artist Analytics: shipped a new user settings service in Go
+  and DynamoDB, architected a regional minor-protections system, and migrated
+  legacy Scala and JVM services onto AWS (DynamoDB, S3).
+- Provisioned AWS and GCP infrastructure with Terraform, wired automated
+  end-to-end tests into GitHub Actions, extended a federated GraphQL subgraph
+  ecosystem in TypeScript and Go, and built Kafka event pipelines plus BigQuery
+  ETL.
+
+
+Airbus / Skywise - Senior Software Engineer
+September 2021 - October 2023 | Atlanta, GA
+
+- Senior engineer: architected the Network Operations Optimization (NOO) data
+  pipelines for real-time airline logistics on Python, FastAPI, Serverless, AWS
+  Lambda, DynamoDB, Kinesis and SQS, and helped drive PI planning for 10-week
+  SAFe iterations.
+- Helped instate e2e, integration and unit testing across Skywise Predictive
+  Maintenance, including a GraphQL mocking system that made pipeline runs
+  deterministic.
+- Proposed and helped build the Atlanta Experience Center: a customized A320 in
+  Microsoft Flight Simulator with a 3D cockpit, wired into Skywise for executive
+  demos.
+
+
+CNN / WarnerMedia - Senior Software Engineer
+March 2020 - September 2021 | Atlanta, GA
+
+- Improved the performance and scalability of LiveStory, a high-traffic React /
+  GraphQL application powering live news feeds for millions of readers a day.
+- Profiled and refactored the cnn-data-api GraphQL service with k6 and Apollo
+  Studio, removing bottlenecks in resolvers and schema stitching.
+- Built a failover REST API for LiveStory to absorb the traffic surge during the
+  2020 Presidential election.
+- Built the first iteration of CNN+, CNN's video streaming platform, inside
+  CNN's proprietary publishing platform.
+- Built DOM reconciliation features within CNN's Clay CMS to achieve reactive
+  client-side UI updates.
+- Built a Redux-style ClientModel layer in Clay for component-level state
+  management across components.
+
+
+Digital Additive - Senior Software Engineer
+April 2015 - March 2020 | Atlanta, GA
+
+- Developed and deployed Vacoda, a content management and creation system for
+  corporate teams built in Laravel and Vue.js, in production use by Home Depot
+  CRM teams and Carters.com.
+- Configured Vacoda to ship to AWS EC2 instances via custom Docker containers
+  driven by BitBucket Pipelines.
+- Built a product rating system for Home Depot.
+- Built middleware and integrations for WeWork, IBM / Interact and SouthernLinc,
+  extending the functionality of Salesforce Marketing Cloud.
+
+
+BlacQube - Web Developer
+May 2013 - April 2015 | Atlanta, GA
+
+- Built award-winning mobile and web front ends for Mercedes and Mercedes-AMG.
+- Worked closely with designers to translate static designs into animated,
+  interactive experiences in JavaScript and jQuery.
+- Upgraded CakePHP on the Mercedes-AMG Private Lounge web app.
+- Administered the web servers hosting various builds.
+
+
+EDUCATION
+
+Wallace State College - Computer Science
+2000 - 2002 | Hartselle, AL
+
+Continuous: Coursera, MIT OpenCourseWare, MDN Web Docs, Udemy
