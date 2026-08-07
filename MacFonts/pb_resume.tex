@@ -5,6 +5,10 @@
 \fancyhf{}
 
 \rfoot{Page \thepage \hspace{1pt}}
+% Company names inside \location: \textbf is a no-op there because \location
+% selects a single-weight fontspec face, so name the bold face explicitly.
+\newcommand{\co}[1]{{\fontspec{Helvetica Neue Bold}#1}}
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,7 +149,60 @@ Coursera \textbullet{} MIT OCW \textbullet{} MDN \textbullet{} Udemy
 \end{tightemize}
 \sectionsep
 
-\location{Earlier: \textbf{CNN / WarnerMedia}, Sr. Software Engineer (2020–2021), LiveStory React / GraphQL performance and a failover REST API for election traffic. \textbf{Digital Additive} (2015–2020), Vacoda, a Laravel + Vue.js platform at Home Depot and Carters.com. \textbf{BlacQube} (2013–2015), Mercedes front ends.}
+\location{Earlier (detailed overleaf): \co{CNN / WarnerMedia}, Sr. Software Engineer (2020–2021), LiveStory React / GraphQL performance and a failover REST API for election traffic. \co{Digital Additive} (2015–2020), Vacoda, a Laravel + Vue.js platform at Home Depot and Carters.com. \co{BlacQube} (2013–2015), Mercedes front ends.}
 
 \end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     PAGE TWO - EARLIER EXPERIENCE IN DETAIL
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+{\color{headings}\fontspec{Helvetica Neue Light}\fontsize{10pt}{12pt}\selectfont
+Patrick Bennett | patrickisgreat@gmail.com | 404.514.7647 | continued from page one\par}
+\vspace{6pt}
+\noindent\makebox[\linewidth]{\color{headings}\rule{\linewidth}{0.4pt}}
+\vspace{4pt}
+
+\section{Earlier Experience}
+
+\runsubsection{CNN / WarnerMedia}
+\descript{| Sr. Software Engineer }
+\location{March 2020 – September 2021 | Atlanta, GA}
+\vspace{\topsep}
+\begin{tightemize}
+\item Improved the performance and scalability of LiveStory, a high-traffic React / GraphQL application powering live news feeds for millions of readers a day.
+\item Profiled and refactored the cnn-data-api GraphQL service with k6 and Apollo Studio, removing bottlenecks in resolvers and schema stitching.
+\item Built a failover REST API for LiveStory to absorb the traffic surge during the 2020 Presidential election.
+\item Built the first iteration of CNN+, CNN's video streaming platform, inside CNN's proprietary publishing platform.
+\item Built DOM reconciliation features within CNN's Clay CMS to achieve reactive client-side UI updates.
+\item Built a Redux-style ClientModel layer in Clay for component-level state management across components.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Digital Additive}
+\descript{| Sr. Software Engineer }
+\location{April 2015 – March 2020 | Atlanta, GA}
+\begin{tightemize}
+\item Developed and deployed Vacoda, a content management and creation system for corporate teams built in Laravel and Vue.js, in production use by Home Depot CRM teams and Carters.com.
+\item Configured Vacoda to ship to AWS EC2 instances via custom Docker containers driven by BitBucket Pipelines.
+\item Built a product rating system for Home Depot.
+\item Built middleware and integrations for WeWork, IBM / Interact and SouthernLinc, extending the functionality of Salesforce Marketing Cloud.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{BlacQube}
+\descript{| Web Developer }
+\location{May 2013 – April 2015 | Atlanta, GA}
+\begin{tightemize}
+\item Built award-winning mobile and web front ends for Mercedes and Mercedes-AMG.
+\item Worked closely with designers to translate static designs into animated, interactive experiences in JavaScript and jQuery.
+\item Upgraded CakePHP on the Mercedes-AMG Private Lounge web app.
+\item Administered the web servers hosting various builds.
+\end{tightemize}
+\sectionsep
+
 \end{document}

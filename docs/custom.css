@@ -166,3 +166,23 @@ p { margin: 0 0 0.35rem; }
   .page-footer { display: none; }
   a { color: inherit; text-decoration: none; }
 }
+
+/* ── Earlier experience detail (page two of the PDF) ──────── */
+
+.earlier-detail {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.earlier-detail .role ul { columns: 1; }
+
+@media (min-width: 900px) {
+  .earlier-detail { column-count: 2; column-gap: 2.5rem; }
+  .earlier-detail h2 { column-span: all; }
+  .earlier-detail .role { break-inside: avoid; }
+}
+
+@media print {
+  .earlier-detail { break-before: page; border-top: none; }
+}
