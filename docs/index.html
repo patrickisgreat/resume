@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Patrick Bennett — Senior Software Engineer</title>
-<meta name="description" content="Patrick Bennett — senior full-stack engineer. Agentic CI/CD, MCP servers and LLM tooling across Vue / TypeScript front ends and cloud-native backends." />
+<title>Patrick Bennett | Senior Software Engineer</title>
+<meta name="description" content="Patrick Bennett, senior full-stack engineer. Agentic CI/CD, MCP servers, RAG retrieval and LLM tooling across Vue / TypeScript front ends and cloud-native backends." />
 <link rel="stylesheet" href="custom.css" />
 </head>
 <body>
@@ -24,7 +24,7 @@
 
     <section>
       <h2>Profile</h2>
-      <p class="profile">13 years shipping production software, two of them in aviation at Airbus&nbsp;/&nbsp;Skywise. I build the systems that let AI agents do real engineering work — agentic CI/CD, MCP servers and LLM tooling across Vue&nbsp;/&nbsp;TypeScript front ends and cloud-native backends — and I know when a problem is better off without a model.</p>
+      <p class="profile">13 years shipping production software, two of them in aviation at Airbus&nbsp;/&nbsp;Skywise. I build the systems that let AI agents do real engineering work: agentic CI/CD, MCP servers, RAG retrieval and LLM tooling across Vue&nbsp;/&nbsp;TypeScript front ends and cloud-native backends. I also know when a problem is better off without a model.</p>
     </section>
 
     <section>
@@ -33,7 +33,7 @@
       <h3>AI &amp; Agentic</h3>
       <p>Claude &bull; OpenAI &bull; Gemini<br />
       MCP servers &bull; Agent orchestration<br />
-      RAG &bull; Embeddings &bull; Vector search<br />
+      RAG &bull; Embeddings &bull; pgvector<br />
       Prompt engineering &bull; Prompt caching<br />
       LLM code review in CI &bull; Claude Code</p>
 
@@ -76,8 +76,7 @@
       <p class="location">2000 - 2002 | Hartselle, AL</p>
 
       <h3>Continuous</h3>
-      <p>Coursera &bull; M.I.T. OpenCourseWare<br />
-      MDN &bull; Udemy &bull; LaraCasts</p>
+      <p>Coursera &bull; MIT OCW &bull; MDN &bull; Udemy</p>
     </section>
 
   </div>
@@ -91,10 +90,11 @@
         <h3 class="employer">Threaditate <span class="descript">| Founder &amp; Principal Engineer</span></h3>
         <p class="location">November 2025 to present | Atlanta, GA</p>
         <ul>
-          <li>Shipped the platform: a Next.js 15 / React 19 / TypeScript (strict) app driving a Rust-to-WebAssembly solver off-thread in a Web Worker, on Supabase, Vercel and a Shopify storefront.</li>
-          <li>Architected an AI-augmented GitHub Actions pipeline — lint, type, unit and Playwright E2E gates plus nightly E2E — with an LLM reviewer on every PR, trigger-scoped and model-pinned to hold review spend down without losing coverage.</li>
-          <li>Published <strong>agentic-toolkit</strong>: an Actions layer turning any repo into an issue &rarr; agent &rarr; PR &rarr; review &rarr; merge &rarr; retro loop, behind a single provider seam that runs the same workflows on Claude Code, OpenAI Codex or Google Gemini, routing by complexity between deterministic checks, a human plan-approval gate and agent implementation.</li>
-          <li>Built an approve-first bookkeeping agent (Gmail &rarr; Claude extraction &rarr; human approval &rarr; QuickBooks) with an append-only audit log and per-action undo, and a Nuxt 4 / Vue 3 SPA on Supabase.</li>
+          <li>Threaditate turns a customer photo into a string art pattern for a physical 240-pin loom kit. Built the platform: Next.js 15 / React 19 / TypeScript (strict) driving a Rust-to-WebAssembly solver in a Web Worker, on Supabase, Vercel and a Shopify storefront.</li>
+          <li>Built <strong>Neural Threadwork</strong>, a closed-loop retrieval system for render quality: a vision-model judge scores every render, a 16-dimension structured feature embedding indexes it in pgvector, and nearest-neighbour retrieval feeds winning recipes back to the advisor as few-shot exemplars. Structured features beat CLIP here: tone, not semantics, predicts the recipe.</li>
+          <li>Architected an AI-augmented GitHub Actions pipeline (lint, type, unit and Playwright E2E gates plus nightly E2E) with an LLM reviewer on every PR, trigger-scoped and model-pinned to hold review spend down without losing coverage.</li>
+          <li>Published <strong>agentic-toolkit</strong>: an Actions layer turning any repo into an issue &rarr; agent &rarr; PR &rarr; review &rarr; merge &rarr; retro loop, behind one provider seam that runs the same workflows on Claude Code, OpenAI Codex or Google Gemini, with complexity routing and a human approval gate.</li>
+          <li>Also built <strong>sharma-bot</strong>, a Go agent loop straight on the Anthropic SDK (no framework) with tool use, prompt caching and per-call cost telemetry; an approve-first bookkeeping agent with an append-only audit log and per-action undo; and a Nuxt 4 / Vue 3 SPA on Supabase.</li>
         </ul>
       </article>
 
@@ -102,10 +102,8 @@
         <h3 class="employer">SoundCloud <span class="descript">| Sr. Software Engineer</span></h3>
         <p class="location">October 2023 &ndash; November 2025 | Remote</p>
         <ul>
-          <li>Creator Success / Artist Analytics: shipped the first iteration of a new user settings service in Go and DynamoDB, and architected a regional minor-protections system.</li>
-          <li>Provisioned AWS and GCP infrastructure with Terraform and built automated end-to-end tests into GitHub Actions pipelines.</li>
-          <li>Migrated legacy Scala and JVM services onto AWS (DynamoDB, S3), and extended a federated GraphQL subgraph ecosystem in TypeScript and Go.</li>
-          <li>Built Kafka event pipelines driving track-boosting algorithms, and ETL pipelines ingesting large datasets into BigQuery.</li>
+          <li>Creator Success / Artist Analytics: shipped a new user settings service in Go and DynamoDB, architected a regional minor-protections system, and migrated legacy Scala and JVM services onto AWS (DynamoDB, S3).</li>
+          <li>Provisioned AWS and GCP infrastructure with Terraform, wired automated end-to-end tests into GitHub Actions, extended a federated GraphQL subgraph ecosystem in TypeScript and Go, and built Kafka event pipelines plus BigQuery ETL.</li>
         </ul>
       </article>
 
@@ -113,22 +111,13 @@
         <h3 class="employer">Airbus / Skywise <span class="descript">| Sr. Software Engineer</span></h3>
         <p class="location">September 2021 &ndash; October 2023</p>
         <ul>
-          <li>Senior engineer: architected the Network Operations Optimization (NOO) data pipelines — real-time airline logistics on Python, FastAPI, Serverless, AWS Lambda, DynamoDB, Kinesis and SQS — and helped drive PI planning for 10-week SAFe iterations.</li>
+          <li>Senior engineer: architected the Network Operations Optimization (NOO) data pipelines for real-time airline logistics on Python, FastAPI, Serverless, AWS Lambda, DynamoDB, Kinesis and SQS, and helped drive PI planning for 10-week SAFe iterations.</li>
           <li>Helped instate e2e, integration and unit testing across Skywise Predictive Maintenance, including a GraphQL mocking system that made pipeline runs deterministic.</li>
           <li>Proposed and helped build the Atlanta Experience Center: a customized A320 in Microsoft Flight Simulator with a 3D cockpit, wired into Skywise for executive demos.</li>
         </ul>
       </article>
 
-      <article class="role">
-        <h3 class="employer">CNN / WarnerMedia <span class="descript">| Sr. Software Engineer</span></h3>
-        <p class="location">March 2020 &ndash; September 2021</p>
-        <ul>
-          <li>Improved performance and scalability of LiveStory, a high-traffic React / GraphQL app powering live news feeds.</li>
-          <li>Profiled and refactored the cnn-data-api GraphQL service with k6 and Apollo Studio; built a failover REST API that absorbed 2020 election traffic.</li>
-        </ul>
-      </article>
-
-      <p class="earlier">Earlier: <strong>Digital Additive</strong>, Sr. Software Engineer (2015&ndash;2020) — Vacoda, a Laravel + Vue.js platform in production at Home Depot and Carters.com. <strong>BlacQube</strong> (2013&ndash;2015) — Mercedes / Mercedes-AMG front ends.</p>
+      <p class="earlier">Earlier: <strong>CNN / WarnerMedia</strong>, Sr. Software Engineer (2020&ndash;2021), LiveStory React / GraphQL performance and a failover REST API for election traffic. <strong>Digital Additive</strong> (2015&ndash;2020), Vacoda, a Laravel + Vue.js platform at Home Depot and Carters.com. <strong>BlacQube</strong> (2013&ndash;2015), Mercedes front ends.</p>
 
     </section>
 

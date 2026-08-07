@@ -36,7 +36,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Profile}
-\raggedright 13 years shipping production software, two of them in aviation at Airbus / Skywise. I build the systems that let AI agents do real engineering work — agentic CI/CD, MCP servers and LLM tooling across Vue / TypeScript front ends and cloud-native backends — and I know when a problem is better off without a model.
+\raggedright 13 years shipping production software, two of them in aviation at Airbus / Skywise. I build the systems that let AI agents do real engineering work: agentic CI/CD, MCP servers, RAG retrieval and LLM tooling across Vue / TypeScript front ends and cloud-native backends. I also know when a problem is better off without a model.
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,7 +48,7 @@
 \subsection{AI \& Agentic}
 Claude \textbullet{} OpenAI \textbullet{} Gemini \\
 MCP servers \textbullet{} Agent orchestration \\
-RAG \textbullet{} Embeddings \textbullet{} Vector search \\
+RAG \textbullet{} Embeddings \textbullet{} pgvector \\
 Prompt engineering \textbullet{} Prompt caching \\
 LLM code review in CI \textbullet{} Claude Code
 \sectionsep
@@ -111,53 +111,41 @@ Coursera \textbullet{} MIT OCW \textbullet{} MDN \textbullet{} Udemy
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experience}
-
 \runsubsection{Threaditate}
 \descript{| Founder \& Principal Engineer }
 \location{November 2025 to present | Atlanta, GA}
 \vspace{6pt} % Removed top vertical space
 \begin{tightemize}
-\item Shipped the platform: a Next.js 15 / React 19 / TypeScript (strict) app driving a Rust-to-WebAssembly solver off-thread in a Web Worker, on Supabase, Vercel and a Shopify storefront.
-\item Architected an AI-augmented GitHub Actions pipeline — lint, type, unit and Playwright E2E gates plus nightly E2E — with an LLM reviewer on every PR, trigger-scoped and model-pinned to hold review spend down without losing coverage.
-\item Published \textbf{agentic-toolkit}: an Actions layer turning any repo into an issue $\rightarrow$ agent $\rightarrow$ PR $\rightarrow$ review $\rightarrow$ merge $\rightarrow$ retro loop, behind a single provider seam that runs the same workflows on Claude Code, OpenAI Codex or Google Gemini, routing by complexity between deterministic checks, a human plan-approval gate and agent implementation.
-\item Built an approve-first bookkeeping agent (Gmail $\rightarrow$ Claude extraction $\rightarrow$ human approval $\rightarrow$ QuickBooks) with an append-only audit log and per-action undo, and a Nuxt 4 / Vue 3 SPA on Supabase.
+
+\item Threaditate turns a customer photo into a string art pattern for a physical 240-pin loom kit. Built the platform: Next.js 15 / React 19 / TypeScript (strict) driving a Rust-to-WebAssembly solver in a Web Worker, on Supabase, Vercel and a Shopify storefront.
+\item Built \textbf{Neural Threadwork}, a closed-loop retrieval system for render quality: a vision-model judge scores every render, a 16-dimension structured feature embedding indexes it in pgvector, and nearest-neighbour retrieval feeds winning recipes back to the advisor as few-shot exemplars. Structured features beat CLIP here: tone, not semantics, predicts the recipe.
+\item Architected an AI-augmented GitHub Actions pipeline (lint, type, unit and Playwright E2E gates plus nightly E2E) with an LLM reviewer on every PR, trigger-scoped and model-pinned to hold review spend down without losing coverage.
+\item Published \textbf{agentic-toolkit}: an Actions layer turning any repo into an issue $\rightarrow$ agent $\rightarrow$ PR $\rightarrow$ review $\rightarrow$ merge $\rightarrow$ retro loop, behind one provider seam that runs the same workflows on Claude Code, OpenAI Codex or Google Gemini, with complexity routing and a human approval gate.
+\item Also built \textbf{sharma-bot}, a Go agent loop straight on the Anthropic SDK (no framework) with tool use, prompt caching and per-call cost telemetry; an approve-first bookkeeping agent with an append-only audit log and per-action undo; and a Nuxt 4 / Vue 3 SPA on Supabase.
+
 \end{tightemize}
 \sectionsep
 
 \runsubsection{SoundCloud}
 \descript{| Sr. Software Engineer }
 \location{October 2023 – November 2025 | Remote}
-\vspace{0pt} % Removed top vertical space
 \begin{tightemize}
-\item Creator Success / Artist Analytics: shipped the first iteration of a new user settings service in Go and DynamoDB, and architected a regional minor-protections system.
-\item Provisioned AWS and GCP infrastructure with Terraform and built automated end-to-end tests into GitHub Actions pipelines.
-\item Migrated legacy Scala and JVM services onto AWS (DynamoDB, S3), and extended a federated GraphQL subgraph ecosystem in TypeScript and Go.
-\item Built Kafka event pipelines driving track-boosting algorithms, and ETL pipelines ingesting large datasets into BigQuery.
+\item Creator Success / Artist Analytics: shipped a new user settings service in Go and DynamoDB, architected a regional minor-protections system, and migrated legacy Scala and JVM services onto AWS (DynamoDB, S3).
+\item Provisioned AWS and GCP infrastructure with Terraform, wired automated end-to-end tests into GitHub Actions, extended a federated GraphQL subgraph ecosystem in TypeScript and Go, and built Kafka event pipelines plus BigQuery ETL.
 \end{tightemize}
 \sectionsep
 
 \runsubsection{Airbus / Skywise}
 \descript{| Sr. Software Engineer }
-\location{September 2021 – October 2023 | Atlanta, GA}
-\vspace{0pt} % Removed top vertical space
+\location{September 2021 – October 2023}
 \begin{tightemize}
-\item Senior engineer: architected the Network Operations Optimization (NOO) data pipelines — real-time airline logistics on Python, FastAPI, Serverless, AWS Lambda, DynamoDB, Kinesis and SQS — and helped drive PI planning for 10-week SAFe iterations.
+\item Senior engineer: architected the Network Operations Optimization (NOO) data pipelines for real-time airline logistics on Python, FastAPI, Serverless, AWS Lambda, DynamoDB, Kinesis and SQS, and helped drive PI planning for 10-week SAFe iterations.
 \item Helped instate e2e, integration and unit testing across Skywise Predictive Maintenance, including a GraphQL mocking system that made pipeline runs deterministic.
 \item Proposed and helped build the Atlanta Experience Center: a customized A320 in Microsoft Flight Simulator with a 3D cockpit, wired into Skywise for executive demos.
 \end{tightemize}
 \sectionsep
 
-\runsubsection{CNN / WarnerMedia }
-\descript{| Sr. Software Engineer }
-\location{March 2020 – September 2021 | Atlanta, GA}
-\vspace{0pt} % Removed top vertical space
-\begin{tightemize}
-\item Improved performance and scalability of LiveStory, a high-traffic React / GraphQL app serving millions daily.
-\item Profiled and refactored the cnn-data-api GraphQL service with k6 and Apollo Studio; built a failover REST API that absorbed 2020 election traffic.
-\end{tightemize}
-\sectionsep
-
-\location{Earlier: \textbf{Digital Additive}, Sr. Software Engineer (2015–2020) — Vacoda, a Laravel + Vue.js platform in production at Home Depot and Carters.com. \textbf{BlacQube} (2013–2015) — Mercedes / Mercedes-AMG front ends.}
+\location{Earlier: \textbf{CNN / WarnerMedia}, Sr. Software Engineer (2020–2021), LiveStory React / GraphQL performance and a failover REST API for election traffic. \textbf{Digital Additive} (2015–2020), Vacoda, a Laravel + Vue.js platform at Home Depot and Carters.com. \textbf{BlacQube} (2013–2015), Mercedes front ends.}
 
 \end{minipage}
 \end{document}
