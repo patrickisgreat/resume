@@ -8,32 +8,14 @@
 % default. If you get compilation errors saying a font is missing, find the line
 % on which the font is used and either change it to a font included with your
 % operating system or comment the line out to use the default font.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-
-% TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% CHANGELOG:
-% v1.1:
-% 1. Fixed several compilation bugs with \renewcommand
-% 2. Got Open-source fonts (Windows/Linux support)
-% 3. Added Last Updated
-% 4. Move Title styling into .sty
-% 5. Commented .sty file.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the
-% vertical limit
+% 1. Overflows onto a second page if either column exceeds the vertical limit.
+% The two-column body is an unbreakable minipage, so overflow silently jumps to
+% page 2 instead of warning. Budget: each column must stay under ~665pt. Measure
+% with an lrbox and \ht+\dp rather than guessing ([t] minipages report \ht as 0).
 % 2. Hacky space on the first bullet point on the second column.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,8 +24,12 @@
 
 \pagestyle{fancy}
 \fancyhf{}
- 
+
 \rfoot{Page \thepage \hspace{1pt}}
+% Company names inside \location: \textbf is a no-op there because \location
+% selects a single-weight fontspec face, so name the bold face explicitly.
+\newcommand{\co}[1]{{\fontspec[Path = fonts/raleway/]{Raleway-Bold}#1}}
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -59,7 +45,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \namesection{Patrick}{Bennett}{ \urlstyle{same}
-\href{mailto:patrickisgreat@gmail.com}{patrickisgreat@gmail.com} | 404.514.7647
+\href{mailto:patrickisgreat@gmail.com}{patrickisgreat@gmail.com} | 404.514.7647 | Atlanta, GA
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,65 +54,78 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.33\textwidth} 
+\begin{minipage}[t]{0.33\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
+%     PROFILE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Education} 
-
-\subsection{The Internet}
-Coursera \\
-M.I.T. OpenCourseWare \\
-MDN Web Docs \\
-LaraCasts \\
-Udemy \\
-Stack OverFlow \\
-GitHub \\
-
+\section{Profile}
+\raggedright 13 years shipping production software, two of them in aviation at Airbus / Skywise. I build the systems that let AI agents do real engineering work: agentic CI/CD, MCP servers, RAG retrieval and LLM tooling across Vue / TypeScript front ends and cloud-native backends. I also know when a problem is better off without a model.
 \sectionsep
-
-\subsection{Wallace State College}
-\descript{Computer Science}
-\location{2000 - 2002 | Hartselle, AL}
-\sectionsep
-
-\subsection{North Cobb High School}
-\location{Grad. 1999 |  Acworth, GA}
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LINKS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Links} 
-Github:// \href{https://github.com/patrickisgreat}{\bf patrickisgreat} \\
-LinkedIn://  \href{https://www.linkedin.com/in/patrick-bennett-7769016}{\bf patrick-bennett-7769016} \\
-StackOverflow:// \href{https://stackoverflow.com/users/864159/funkenstein}{\bf funkenstein} \\
-Portfolio:// \href{https://patrickisgreat.com/}{patrickisgreat.com} \\
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Skills}
-\subsection{Programming}
-JavaScript \textbullet{}  Python \textbullet{}  PHP \textbullet{} C++ \\
-React \textbullet{}  Laravel \textbullet{}  Vue.js {} \\
-Node.js \textbullet{}  Express \textbullet{} NestJS \\ 
-CSS \textbullet{} Sass \textbullet{} Less \textbullet{} HTML \\
-GraphQL \textbullet{} REST \textbullet{}  SOAP \\
-MySQL \textbullet{}  Postgres
+
+\subsection{AI \& Agentic}
+Claude \textbullet{} OpenAI \textbullet{} Gemini \\
+MCP servers \textbullet{} Agent orchestration \\
+RAG \textbullet{} Embeddings \textbullet{} pgvector \\
+Prompt engineering \textbullet{} Prompt caching \\
+LLM code review in CI \textbullet{} Claude Code
 \sectionsep
 
-\subsection{DevOps}
-Linux CLI \textbullet{}  BASH \textbullet{}  Vim \\
-Git (cli) \textbullet{} Docker \\
-AWS \textbullet{} Lambda \textbullet{} CloudFormation  \\
-Kinesis \textbullet{} DynamoDB  \\
-Jest \textbullet{} Pytest \textbullet{} Mocha 
+\subsection{Languages}
+TypeScript \textbullet{} JavaScript \textbullet{} Python \\
+Rust \textbullet{} Go \textbullet{} PHP \textbullet{} Swift \textbullet{} SQL
+\sectionsep
+
+\subsection{Frontend}
+Vue.js \textbullet{} Nuxt \textbullet{} React \textbullet{} Next.js \\
+SPA \textbullet{} Micro-frontends \\
+HTML \textbullet{} SASS \textbullet{} CSS \textbullet{} Tailwind
+\sectionsep
+
+\subsection{Backend \& Data}
+Node.js \textbullet{} Go \textbullet{} FastAPI \textbullet{} NestJS \\
+Federated GraphQL \textbullet{} REST \textbullet{} Kafka \\
+Postgres \textbullet{} DynamoDB \textbullet{} BigQuery
+\sectionsep
+
+\subsection{DevOps \& Testing}
+GitHub Actions \textbullet{} Docker \textbullet{} Linux \\
+AWS (Lambda, Kinesis, SQS) \textbullet{} GCP \\
+CloudFormation \textbullet{} Terraform \\
+Playwright \textbullet{} Vitest \textbullet{} Jest \textbullet{} Pytest \textbullet{} k6
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links}
+Github:// \href{https://github.com/patrickisgreat}{\bf patrickisgreat} \\
+LinkedIn://  \href{https://www.linkedin.com/in/patrick-bennett-7769016}{\bf patrick-bennett-7769016} \\
+StackOverflow:// \href{https://stackoverflow.com/users/864159/funkenstein}{\bf funkenstein} \\
+Portfolio:// \href{https://patrickisgreat.com/}{patrickisgreat.com}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{Wallace State College}
+\descript{Computer Science}
+\location{2000 - 2002 | Hartselle, AL}
+\sectionsep
+
+\subsection{Continuous}
+Coursera \textbullet{} MIT OCW \textbullet{} MDN \textbullet{} Udemy
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,66 +134,102 @@ Jest \textbullet{} Pytest \textbullet{} Mocha
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{minipage} 
+\end{minipage}
 \hfill
-\begin{minipage}[t]{0.66\textwidth} 
+\begin{minipage}[t]{0.66\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experience}
-\runsubsection{Airbus}
-\descript{| Sr. Software Engineer }
-\location{September 2021 to present}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\runsubsection{Threaditate}
+\descript{| Founder \& Principal Engineer }
+\location{November 2025 to present | Atlanta, GA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space on the first entry
 \begin{tightemize}
 
-\item Proposed and implemented the Atlanta Experience Center: customized a realistic A320 model in Microsoft Flight Simulator, constructed a 3D cockpit, and integrated with SkyWise for demo purposes to high-level stakeholders.
-\item Team Lead: Architected the NOO (Network Operations Optimization) data pipelines, a solution suite for real-time airline logistics, leveraging Python, Serverless, FastAPI, AWS Lambda, DynamoDB, Kinesis, and SQS.
-\item Developed the sasipy library, providing comprehensive interfaces and types for GE's SASI-Q API, enabling developer friendly data modeling and integration.
-\item Led a subteam to instate comprehensive testing (e2e, integration, unit) across SkyWise Predictive Maintenance, and built a GraphQL mocking system.
-\item Traveled internationally to collaborate with engineering teams and spearheaded PI planning for 10-week iterations.
+\item Threaditate turns a customer photo into a string art pattern for a physical 240-pin loom kit. Built the platform: Next.js 15 / React 19 / TypeScript (strict) driving a Rust-to-WebAssembly solver in a Web Worker, on Supabase, Vercel and a Shopify storefront.
+\item Built \textbf{Neural Threadwork}, a closed-loop retrieval system for render quality: a vision-model judge scores every render, a 16-dimension structured feature embedding indexes it in pgvector, and nearest-neighbour retrieval feeds winning recipes back to the advisor as few-shot exemplars. Structured features beat CLIP here: tone, not semantics, predicts the recipe.
+\item Architected an AI-augmented GitHub Actions pipeline (lint, type, unit and Playwright E2E gates plus nightly E2E) with an LLM reviewer on every PR, trigger-scoped and model-pinned to hold review spend down without losing coverage.
+\item Published \textbf{agentic-toolkit}: an Actions layer turning any repo into an issue $\rightarrow$ agent $\rightarrow$ PR $\rightarrow$ review $\rightarrow$ merge $\rightarrow$ retro loop, behind one provider seam that runs the same workflows on Claude Code, OpenAI Codex or Google Gemini, with complexity routing and a human approval gate.
+\item Also built \textbf{sharma-bot}, a Go agent loop straight on the Anthropic SDK (no framework) with tool use, prompt caching and per-call cost telemetry; an approve-first bookkeeping agent with an append-only audit log and per-action undo; and a Nuxt 4 / Vue 3 SPA on Supabase.
 
 \end{tightemize}
 \sectionsep
 
-\runsubsection{CNN / WarnerMedia }
+\runsubsection{SoundCloud}
 \descript{| Sr. Software Engineer }
-\location{March 2020 – September 2021}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\location{October 2023 – November 2025 | Remote}
 \begin{tightemize}
-\item Improved performance and scalability of the LiveStory React / GraphQL application, a high-traffic application used for live news feeds.
-\item Improved performance of the cnn-data-api GraphQL service using k6, and Apollo Studio to identify and refactor bottlenecks in queries and api stitching.
-\item Built failover REST api for LiveStory application to support higher traffic during the Presidential election.
-\item Helped build very early iteration of CNN+, a video streaming platform, before going back to Livestory. 
-\item Built DOM reconciliation features within CNN's Clay CMS to achieve reactive client side UI updates.
-\item Built ClientModel implementation within Clay to allow for redux-esque client side state management across components.
+\item Creator Success / Artist Analytics: shipped a new user settings service in Go and DynamoDB, architected a regional minor-protections system, and migrated legacy Scala and JVM services onto AWS (DynamoDB, S3).
+\item Provisioned AWS and GCP infrastructure with Terraform, wired automated end-to-end tests into GitHub Actions, extended a federated GraphQL subgraph ecosystem in TypeScript and Go, and built Kafka event pipelines plus BigQuery ETL.
 \end{tightemize}
 \sectionsep
 
+\runsubsection{Airbus / Skywise}
+\descript{| Sr. Software Engineer }
+\location{September 2021 – October 2023}
+\begin{tightemize}
+\item Senior engineer: architected the Network Operations Optimization (NOO) data pipelines for real-time airline logistics on Python, FastAPI, Serverless, AWS Lambda, DynamoDB, Kinesis and SQS, and helped drive PI planning for 10-week SAFe iterations.
+\item Helped instate e2e, integration and unit testing across Skywise Predictive Maintenance, including a GraphQL mocking system that made pipeline runs deterministic.
+\item Proposed and helped build the Atlanta Experience Center: a customized A320 in Microsoft Flight Simulator with a 3D cockpit, wired into Skywise for executive demos.
+\end{tightemize}
+\sectionsep
+
+\location{Earlier (detailed overleaf): \co{CNN / WarnerMedia}, Sr. Software Engineer (2020–2021), LiveStory React / GraphQL performance and a failover REST API for election traffic. \co{Digital Additive} (2015–2020), Vacoda, a Laravel + Vue.js platform at Home Depot and Carters.com. \co{BlacQube} (2013–2015), Mercedes front ends.}
+
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     PAGE TWO - EARLIER EXPERIENCE IN DETAIL
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+{\color{headings}\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont
+Patrick Bennett | patrickisgreat@gmail.com | 404.514.7647 | continued from page one\par}
+\vspace{6pt}
+\noindent\makebox[\linewidth]{\color{headings}\rule{\linewidth}{0.4pt}}
+\vspace{4pt}
+
+\section{Earlier Experience}
+
+\runsubsection{CNN / WarnerMedia}
+\descript{| Sr. Software Engineer }
+\location{March 2020 – September 2021 | Atlanta, GA}
+\vspace{\topsep}
+\begin{tightemize}
+\item Improved the performance and scalability of LiveStory, a high-traffic React / GraphQL application powering live news feeds for millions of readers a day.
+\item Profiled and refactored the cnn-data-api GraphQL service with k6 and Apollo Studio, removing bottlenecks in resolvers and schema stitching.
+\item Built a failover REST API for LiveStory to absorb the traffic surge during the 2020 Presidential election.
+\item Built the first iteration of CNN+, CNN's video streaming platform, inside CNN's proprietary publishing platform.
+\item Built DOM reconciliation features within CNN's Clay CMS to achieve reactive client-side UI updates.
+\item Built a Redux-style ClientModel layer in Clay for component-level state management across components.
+\end{tightemize}
+\sectionsep
 
 \runsubsection{Digital Additive}
 \descript{| Sr. Software Engineer }
-\location{April 2015 - March 2020}
+\location{April 2015 – March 2020 | Atlanta, GA}
 \begin{tightemize}
-\item Develpoed and Deployed Vacoda - content management and creation system for corporate teams built in Laravel and Vue.js. This app is currently in production use by Home Depot CRM teams and Carters.com.
-\item Configured Vacoda to ship to AWS EC2 instances via custom Docker containers with BitBucket Pipelines.
+\item Developed and deployed Vacoda, a content management and creation system for corporate teams built in Laravel and Vue.js, in production use by Home Depot CRM teams and Carters.com.
+\item Configured Vacoda to ship to AWS EC2 instances via custom Docker containers driven by BitBucket Pipelines.
 \item Built a product rating system for Home Depot.
-\item Built various middleware and integrations for clients such as WeWork, IBM / Interact, and SouthernLinc to extend the functionality of Salesforce Marketing cloud.
-\end{tightemize}  
+\item Built middleware and integrations for WeWork, IBM / Interact and SouthernLinc, extending the functionality of Salesforce Marketing Cloud.
+\end{tightemize}
 \sectionsep
 
 \runsubsection{BlacQube}
 \descript{| Web Developer }
-\location{May 2013 - April 2015 | Atlanta, GA}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\location{May 2013 – April 2015 | Atlanta, GA}
 \begin{tightemize}
-\item Built award winning mobile and web front ends for Mercedes and Mercedes-AMG.
-\item Worked closely with designers to translate static designs into animated interactive experiences built with JavaScript and jQuery.
-\item Upgraded cakePHP on the Mercedes-AMG Private Lounge web app. 
-\item Administered web servers hosting various builds.
+\item Built award-winning mobile and web front ends for Mercedes and Mercedes-AMG.
+\item Worked closely with designers to translate static designs into animated, interactive experiences in JavaScript and jQuery.
+\item Upgraded CakePHP on the Mercedes-AMG Private Lounge web app.
+\item Administered the web servers hosting various builds.
 \end{tightemize}
 \sectionsep
 
-\end{minipage} 
-\end{document}  \documentclass[]{article}
+\end{document}
